@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Counter</title>
+</head>
+<body>
+    <div class = "container">
+        <h1>Counter</h1>
+        <p class ="counter">0</p>
+        <button id="incre" class ="incre">+</button>
+        <button id="decre" class ="decre">-</button>
+    </div>
+
+    <script>
+        //variable declaration
+        const counter = document.querySelector('.counter');
+        const incre   = document.querySelector('.incre');
+        const decre   = document.querySelector('.decre');
+
+        //increment 
+        let count = 0;
+        incre.addEventListener("click",()=>
+        {
+            count = count + 1;
+            counter.innerHTML = count;
+        });
+
+        // decrement
+        decre.addEventListener("click",()=>
+        {
+            count = count - 1;
+            counter.innerHTML = count;
+        });
+    </script>
+
+</body>
+</html>
